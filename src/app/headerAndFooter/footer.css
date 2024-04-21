@@ -1,0 +1,54 @@
+/*Footer styles*/
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  padding: 15px 15px;
+  background-color: #ffffff;
+  border-top: 3px solid orange;
+  color: orange;
+  font-size: 14px;
+}
+
+.footer--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  font-weight: bold;
+}
+
+.footer--right {
+  width: 50%;
+  font-weight: bold;
+}
+
+.footer--text {
+  margin: 2px;
+}
+
+@media screen and (width > 800px) {
+
+  .footer {
+    font-size: 20px;
+  }
+  .footer--left {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer--right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer--right .footer--text {
+    margin: 0px 20px;
+  }
+}

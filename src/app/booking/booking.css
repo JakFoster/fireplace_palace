@@ -1,0 +1,89 @@
+
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.design-booking {
+  background-color: orange;
+  padding-left: 10px;
+  min-width: 300px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(246, 246, 246);
+  min-width: 280px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(246, 246, 246);
+  min-width: 280px;
+}
+
+.data-input {
+  min-width: 250px;
+  align-self: center;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.data-type {
+  text-align: left;
+  font-size: 16px;
+  padding-top: 15px;
+  font-weight: 100;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.error-msg {
+  color: orangered;
+}
+
+.submit {
+  margin-top: 20px;
+  width: max-content;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: orange;
+  text-align: center;
+}
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.submitted-text {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.error-message {
+  color: orangered;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 100;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+
