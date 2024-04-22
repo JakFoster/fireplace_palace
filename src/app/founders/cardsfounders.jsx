@@ -1,15 +1,15 @@
 import Image from "next/image";
 export default function CardsFounders({ url, header, text }) {
   return (
-    <article className="card">
-      <h3>{header}</h3>
-      <p className="card-info">{text}</p>
+    <article className="about--card">
+      <h3 className="about--header">{header}</h3>
+      <p className="about--text">{text}</p>
       <Image
-        className="card-image"
+        className="about--image"
         src={url}
         alt="founders"
-        width="300"
-        height="250"
+        width="260"
+        height="180"
       />
     </article>
   );

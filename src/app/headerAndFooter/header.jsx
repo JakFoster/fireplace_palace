@@ -14,7 +14,7 @@ export default function Header() {
     <header className="header">
       {!toggle && (
         <>
-          <a className="header--link" href="">
+          <a className="header--link" href="./">
             <p>🔥 Fireplace Palace</p>
           </a>
           <button className="header--button" onClick={handleClick}>
