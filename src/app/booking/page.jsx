@@ -74,118 +74,124 @@ export default function Booking() {
 
   return (
     <main className="mainBooking">
-        <h2 className="mainBooking--title">Request A Design Consultation</h2>
-        <p className="mainBooking--description">Fill in and submit your details below. We&apos;ll be in touch as soon as we can to book your in-person consultation with one of our fantastic designers!</p>
       {!state.success && (
-        <form className="mainBooking--form" onSubmit={handleSubmit}>
-          <h3 className="mainBooking--personal">Personal information:</h3>
-          <fieldset className="mainBooking--fields">
-            <label className="mainBooking--type" htmlFor="name">
-              *Full Name
-            </label>
-            {state.errors.name && (
-              <p className="mainBooking--error">{state.errors.name}</p>
-            )}
-            <input
-              className="mainBooking--input"
-              type="text"
-              id="name"
-              name="name"
-              value={state.formData.name}
-              onChange={handleChange}
-            />
+        <>
+          <h2 className="mainBooking--title">Request A Design Consultation</h2>
+          <p className="mainBooking--description">
+            Fill in and submit your details below. We&apos;ll be in touch as
+            soon as we can to book your in-person consultation with one of our
+            fantastic designers!
+          </p>
+          <form className="mainBooking--form" onSubmit={handleSubmit}>
+            <h3 className="mainBooking--personal">Personal information:</h3>
+            <fieldset className="mainBooking--fields">
+              <label className="mainBooking--type" htmlFor="name">
+                *Full Name
+              </label>
+              {state.errors.name && (
+                <p className="mainBooking--error">{state.errors.name}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="text"
+                id="name"
+                name="name"
+                value={state.formData.name}
+                onChange={handleChange}
+              />
 
-            <label className="mainBooking--type" htmlFor="postcode">
-              *Postcode
-            </label>
-            {state.errors.postcode && (
-              <p className="mainBooking--error">{state.errors.postcode}</p>
-            )}
-            <input
-              className="mainBooking--input"
-              type="text"
-              id="postcode"
-              name="postcode"
-              value={state.formData.postcode}
-              onChange={handleChange}
-            />
+              <label className="mainBooking--type" htmlFor="postcode">
+                *Postcode
+              </label>
+              {state.errors.postcode && (
+                <p className="mainBooking--error">{state.errors.postcode}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="text"
+                id="postcode"
+                name="postcode"
+                value={state.formData.postcode}
+                onChange={handleChange}
+              />
 
-            <label className="mainBooking--type" htmlFor="house">
-              *Address
-            </label>
-            {state.errors.house && (
-              <p className="mainBooking--error">{state.errors.house}</p>
-            )}
-            <input
-              className="mainBooking--input"
-              type="text"
-              id="house"
-              name="house"
-              value={state.formData.house}
-              onChange={handleChange}
-            />
+              <label className="mainBooking--type" htmlFor="house">
+                *Address
+              </label>
+              {state.errors.house && (
+                <p className="mainBooking--error">{state.errors.house}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="text"
+                id="house"
+                name="house"
+                value={state.formData.house}
+                onChange={handleChange}
+              />
 
-            <label className="mainBooking--type" htmlFor="city">
-              *City
-            </label>
-            {state.errors.city && (
-              <p className="mainBooking--error">{state.errors.city}</p>
-            )}
-            <input
-              className="mainBooking--input"
-              type="text"
-              id="city"
-              name="city"
-              value={state.formData.city}
-              onChange={handleChange}
-            />
-          </fieldset>
-          <h3 className="mainBooking--contact">Contact information:</h3>
-          <fieldset className="mainBooking--fields">
-            <label className="mainBooking--type" htmlFor="phoneNumber">
-              *Phone number
-            </label>
-            {state.errors.phoneNumber && (
-              <p className="mainBooking--error">{state.errors.phoneNumber}</p>
-            )}
-            <input
-              className="mainBooking--input"
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              value={state.formData.phoneNumber}
-              onChange={handleChange}
-            />
+              <label className="mainBooking--type" htmlFor="city">
+                *City
+              </label>
+              {state.errors.city && (
+                <p className="mainBooking--error">{state.errors.city}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="text"
+                id="city"
+                name="city"
+                value={state.formData.city}
+                onChange={handleChange}
+              />
+            </fieldset>
+            <h3 className="mainBooking--contact">Contact information:</h3>
+            <fieldset className="mainBooking--fields">
+              <label className="mainBooking--type" htmlFor="phoneNumber">
+                *Phone number
+              </label>
+              {state.errors.phoneNumber && (
+                <p className="mainBooking--error">{state.errors.phoneNumber}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                value={state.formData.phoneNumber}
+                onChange={handleChange}
+              />
 
-            <label className="mainBooking--type" htmlFor="email">
-              *Email Address
-            </label>
-            {state.errors.email && (
-              <p className="mainBooking--error">{state.errors.email}</p>
+              <label className="mainBooking--type" htmlFor="email">
+                *Email Address
+              </label>
+              {state.errors.email && (
+                <p className="mainBooking--error">{state.errors.email}</p>
+              )}
+              <input
+                className="mainBooking--input"
+                type="email"
+                id="email"
+                name="email"
+                value={state.formData.email}
+                onChange={handleChange}
+              />
+            </fieldset>
+            {!state.loading && (
+              <button className="mainBooking--submit">
+                Request Design Consultation
+              </button>
             )}
-            <input
-              className="mainBooking--input"
-              type="email"
-              id="email"
-              name="email"
-              value={state.formData.email}
-              onChange={handleChange}
-            />
-          </fieldset>
-          {!state.loading && (
-            <button className="mainBooking--submit">Request Design Consultation</button>
-          )}
-          {state.loading && <div className="mainBooking--submit">Requesting...</div>}
-        </form>
+            {state.loading && (
+              <div className="mainBooking--submit">Requesting...</div>
+            )}
+          </form>
+        </>
       )}
       {state.success && (
-        <div className="success loading">
-          <p className="submitted-text">
-            Your data has been succesfully sold to third parties.{" "}
-          </p>
-
-          <Image src="/elmoMeme.jpeg" alt="elmo" width={300} height={300} />
-        </div>
+        <p className="mainBooking--success">
+          Thank you for your interest in our services! We will be in touch within the next 2-3 working days to book a meeting!
+        </p>
       )}
     </main>
   );

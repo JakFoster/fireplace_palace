@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 900px;
   padding-top: 125.4px;
   padding-bottom: 80px;
   background-color: orange;
@@ -15,14 +16,16 @@
 
 .mainBooking--title {
   font-size: 20px;
-  border-top: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: black;
+  padding: 5px;
+  border-top: 4px solid #000000;
+  border-bottom: 4px solid #000000;
 }
 
 .mainBooking--description {
-  background-color: rgba(0, 0, 0, 0.085);
+  background-color: rgb(0, 0, 0);
   color: white;
-  border: 1px solid #ffffff;
+  border: 3px solid #ffffffe5;
   border-radius: 4px;
   font-weight: 700;
   padding: 10px;
@@ -58,8 +61,7 @@
   padding-top: 0px;
   padding-bottom: 13px;
   border: 3px solid #ffffffe5;
-  /* border-right: 3px solid #ffffff5b;
-  border-top: 3px solid #ffffff5b; */
+  background-color: black;
   -webkit-box-shadow: -1px 1px 4px 0px rgba(255,255,255,1);
   -moz-box-shadow: -1px 1px 4px 0px rgba(255,255,255,1);
   box-shadow: -1px 1px 4px 0px rgba(255,255,255,1);
@@ -95,10 +97,77 @@
   align-self: center;
   font-size: 16px;
   font-weight: 700;
+  text-align: center;
   margin-top: 40px;
   padding: 10px 20px;
-  border: 2px solid rgb(255, 255, 255);
+  border: 3px solid #ffffffe5;
   border-radius: 10px;
-  background-color: #001230;
+  background-color: #000000;
   color: white;
+}
+
+/* Succesful form submission */
+
+.mainBooking--success {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+}
+
+/* breakpoints */
+
+@media (min-width: 768px) {
+
+  .mainBooking--description {
+    width: 80%;
+  }
+
+  .mainBooking--form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+  }
+
+  .mainBooking--personal {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+  }
+  .mainBooking--contact {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .mainBooking--fields {
+    width: 90%;
+    max-width: 500px;
+    justify-self: center;
+  }
+
+  .mainBooking--fields:nth-of-type(2) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .mainBooking--input {
+    height: 35px;
+  }
+  .mainBooking--submit {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 50%;
+    justify-self: center;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mainBooking--description {
+    width: 40%;
+  }
 }
